@@ -12,7 +12,7 @@ useEffect( ()=> {
   if (count> highCount) {
       setHighCount(count);
     }
-},[count]);
+},[count, highCount]);
 
 const increment = () => {
  setCount(count+1);
@@ -58,7 +58,7 @@ const createBoard = () => {
     return (
         <div id="tileBoard">
             {tilePosition.map( (tile)=> {
-                return <div className="tileCont" id={tile} onClick={clickTile}><Images index={tile}/></div>;
+                return <div className="tileCont" key={tile} id={tile} onClick={clickTile}><Images index={tile}/></div>;
             })}
         </div>
     );
@@ -66,12 +66,12 @@ const createBoard = () => {
 
 //function when click a tile
 const clickTile = (e) => {
-    console.log(e.target.id);
+    // console.log(e.target.id);
    //check if already clicked
     let check= clicked.findIndex( (arr)=> {
         return arr === e.target.id;
     });
-    console.log(check);
+    // console.log(check);
     if (check===-1) {
         //add to clicked and increment count
         addClicked(e.target.id);
