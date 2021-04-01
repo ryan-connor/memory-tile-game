@@ -1,3 +1,8 @@
+<h4 align="center">
+<img alt="Memory Tile Game Gif" src="demo/MemoryTileGame.gif" height="350px">
+<img alt="Memory Tile Game Image" src="demo/MemoryTileGame.png" height="350px">
+</h4>
+
 ## Tile Memory Game
 Tile Memory Game where you try not to select the same tile twice.
 
